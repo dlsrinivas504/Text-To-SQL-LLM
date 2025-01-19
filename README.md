@@ -8,3 +8,25 @@ Text-to-SQL Large Language Models (LLMs) are AI-driven systems that transform na
 - Querying databases without requiring SQL expertise.
 - Automating data retrieval tasks in business intelligence tools.
 - Providing SQL assistance for developers and analysts.
+
+### Implementation
+1.SQLLite: Insert some records through Python Prgramming Language.
+2.Creating LLM Application, LLM generate the Query
+3.Query hit the database and get the records.
+
+### Commads
+1 Creating Virtual env: python -m venv <local_path>/Text-To-SQL-LLM/textSqlVenv
+2.Activate Virtual env: python -m venv textSqlVenv
+3.Installing required modules: pip install -r .\requirements.txt
+
+##Examples:
+ User question is  Which soap achieved the highest sales in 2024?
+SQL Query from Model  SELECT PRODUCT_NAME FROM PRODUCTS
+					  WHERE CATEGORY = 'Soap'
+					  AND SALES_PERCENTAGE_2024 = (SELECT MAX(SALES_PERCENTAGE_2024) FROM PRODUCTS WHERE CATEGORY = 'Soap');
+
+User question is  Which product achieved the highest sales in 2024?
+SQL Query from Model  SELECT PRODUCT_NAME FROM PRODUCTS
+                      WHERE SALES_PERCENTAGE_2024 = (SELECT MAX(SALES_PERCENTAGE_2024) FROM PRODUCTS);
+
+
