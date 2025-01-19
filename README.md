@@ -19,7 +19,7 @@ Text-to-SQL Large Language Models (LLMs) are AI-driven systems that transform na
 2.Activate Virtual env: python -m venv textSqlVenv
 3.Installing required modules: pip install -r .\requirements.txt
 
-##Examples:
+### Examples:
  User question is  Which soap achieved the highest sales in 2024?
 SQL Query from Model  SELECT PRODUCT_NAME FROM PRODUCTS
 					  WHERE CATEGORY = 'Soap'
